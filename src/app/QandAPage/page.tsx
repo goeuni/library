@@ -117,36 +117,36 @@ export default function QandAPage() {
 
           {/* 페이지 네비게이션 */}
           {totalPages > 1 && (
-              <div className="mt-6 flex justify-center space-x-4">
-                <button
-                  onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                  disabled={currentPage === 1}
-                  className={`px-4 py-2 rounded-lg ${
-                    currentPage === 1
-                      ? "bg-gray-300 cursor-not-allowed"
-                      : "bg-sky-500 text-white hover:bg-sky-700"
-                  }`}
-                >
-                  이전
-                </button>
-                <span className="self-center">
-                  {currentPage} / {totalPages}
-                </span>
-                <button
-                  onClick={() =>
-                    setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-                  }
-                  disabled={currentPage === totalPages}
-                  className={`px-4 py-2 rounded-lg ${
-                    currentPage === totalPages
-                      ? "bg-gray-300 cursor-not-allowed"
-                      : "bg-sky-500 text-white hover:bg-sky-700"
-                  }`}
-                >
-                  다음
-                </button>
-              </div>
-            )}
+            <div className="mt-6 flex justify-center space-x-4">
+              <button
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className={`px-4 py-2 rounded-lg ${
+                  currentPage === 1
+                    ? "bg-gray-300 cursor-not-allowed"
+                    : "bg-sky-500 text-white hover:bg-sky-700"
+                }`}
+              >
+                이전
+              </button>
+              <span className="self-center">
+                {currentPage} / {totalPages}
+              </span>
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                }
+                disabled={currentPage === totalPages}
+                className={`px-4 py-2 rounded-lg ${
+                  currentPage === totalPages
+                    ? "bg-gray-300 cursor-not-allowed"
+                    : "bg-sky-500 text-white hover:bg-sky-700"
+                }`}
+              >
+                다음
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
